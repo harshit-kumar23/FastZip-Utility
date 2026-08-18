@@ -1,69 +1,37 @@
-<!-- Author : Samir Paul -->
-<div align="center">
-<h1> Text File Compressor De-compressor Web App</h1>
-</div>
+# FastZip Utility
 
+**FastZip Utility** is a lightweight, web-based text file compression and decompression tool built with pure JavaScript, HTML5, and CSS3. It utilizes the **Huffman Coding Algorithm** to achieve lossless compression directly in the browser without sending data to external servers.
 
-- This webapp uses Huffman Coding for Text Compression and De-compression.
-- Made with JavaScript, HTML5 and CSS3.
-- Live Demo:👇
+---
 
-- [x] [samirpaulb.github.io/txt-compressor](https://samirpaulb.github.io/txt-compressor/)
+## Key Features
 
-- [x] [txt-compressor.vercel.app](https://txt-compressor.vercel.app/)
+* **Lossless Compression:** Encodes text files into binary streams using frequency-based prefix codes.
+* **In-Browser Processing:** Fast execution with zero server-side processing or external network requests.
+* **Intuitive Web Interface:** Clean UI to upload, compress, decompress, and download files seamlessly.
+* **Real-time Metrics:** Displays original file size, compressed file size, and space savings percentage.
 
+---
 
-## About this application:
+## Technical Stack
 
-* This website performs Lossless data compression and decompression of text(.txt) files using Huffman Algorithm.
-* In this algorithm, a variable-length code is assigned to input different characters. The code length is related to how frequently characters are used. Most frequent characters have the smallest codes and longer codes for least frequent characters.
-* A Huffman code is a tree, built bottom up, starting with the list of different characters appearing in a text and their frequency. 
-* Compression ratio usually improves as the file size increases.
-* The website is made responsive (with HTML and CSS ) and interactive (with JavaScript ) .
-* An [Info page](https://samirpaulb.github.io/txt-compressor/info.html) is added to give more information about tecnique of **Lossless Data Compression** with Huffman coding.
+* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+* **Core Algorithms:** Huffman Coding Algorithm, Min-Heap / Priority Queue Data Structure
 
+---
 
+## Algorithmic Workflow
 
+1. **Frequency Analysis:** Scans the input text to calculate character frequency distribution.
+2. **Priority Queue Construction:** Builds a Min-Heap of nodes corresponding to character frequencies.
+3. **Tree Generation:** Repeatedly merges the two lowest-frequency nodes to construct the optimal Huffman Tree.
+4. **Binary Encoding:** Traverses the tree to assign prefix codes and serializes the bitstream for download.
 
-## Video
-https://user-images.githubusercontent.com/77569653/172716965-50560f4a-2acf-4013-ae87-8b474b2a09e3.mp4
+---
 
+## Getting Started
 
-
-- [x] Landing Page:
-
-<a href="#"> ![screenshot](images/readme-images/landing-page.png) </a>
-
-- [x] Upload File
-
-<a href="#"> ![step1](images/readme-images/step1.png) </a>
-
-
-- [x] Select Action (Compress / De-compress)
-
-<a href="#"> ![step2](images/readme-images/step2.png) </a>
-
-
-- [x] Wait for File Download
-    * File gets downloaded automatically when selected process is complete.
-
-    * Compression - Compression Ratio is also displayed 
-
-    <a href="#"> ![compression](images/readme-images/step3.png) </a>
-    
-    * De-compression
-
-    <a href="#"> ![decompression](images/readme-images/decompression.png) </a>
-
-* Additional Instructions and Warnings are provided if the above steps are not followed correctly
-
-<a href="#"> ![noFile](images/readme-images/nofile.png) </a>
-
-<a href="#"> ![smallFile](images/readme-images/verysmallfile.png)  </a>
-
-
-
-* About the tecnique of Lossless Data Compression with Huffman coding.
-
-<a href="#"> ![info1](images/readme-images/info.jpeg) </a>
-
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/harshit-kumar23/FastZip-Utility.git](https://github.com/harshit-kumar23/FastZip-Utility.git)
+   cd FastZip-Utility
